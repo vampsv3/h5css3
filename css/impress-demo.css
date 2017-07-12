@@ -341,6 +341,70 @@ a:focus {
     height: 600px;
 }
 
+#semantics_tiny{
+  margin: 15px 20px;
+  font-family: Arial, "MS Trebuchet", sans-serif;
+  width: 960px;
+  font-size: 90%;
+}
+
+#semantics_tiny p{ margin: 0 0 20px 0;}
+
+#semantics_tiny p, li{ line-height: 20px; }
+
+#semantics_tiny #page_header{ width: 100%; border:1px solid #000}
+
+#semantics_tiny #page_header h1{ 
+    font-size: 200%;
+    margin-bottom: 20px;
+}
+
+#semantics_tiny #page_header > nav > ul, #page_footer > nav > ul{
+  list-style: none;
+  margin: 0 0 10px 0; 
+  padding: 0;
+}
+
+#semantics_tiny #page_header > nav > ul > li, #page_footer nav > ul > li{
+  margin: 0 20px 0 0;
+  padding: 0;
+  display: inline;
+}
+
+#semantics_tiny #posts{
+  float: left;
+  width: 74%;
+  border:1px solid #000
+}
+
+#semantics_tiny #posts h2{
+  font-size: 18px;
+}
+
+#semantics_tiny #posts aside{
+  float: right;
+  font-size: 19px;
+  line-height: 40px;
+  margin-left: 5%;
+  width: 35%;
+  border:1px solid #F00
+}
+
+#semantics_tiny #sidebar{
+  float: left;
+  width: 25% - 20px;
+  margin-left: 20px;
+  border:1px solid #000
+}
+
+#semantics_tiny #page_footer{
+  clear: both;
+  display: block; 
+  text-align: center;
+  width: 100%; 
+  border:1px solid #000
+}
+
 
 /*
     Second step is nothing special, just a text with a link, so it doesn't need
