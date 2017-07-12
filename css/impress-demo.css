@@ -316,6 +316,31 @@ a:focus {
     background-image: url(../resources/html5_styling_512.png);
 }
 
+#semantics_big h1{
+    margin-bottom: 80px;
+    padding-left: 290px;
+    font-size: 70px;
+}
+
+#semantics_big .pptLeft{
+    float: left;
+    width: 270px;
+    word-wrap:break-word;
+    font-size: 30px;
+    text-indent:2em;
+    padding-top: 15px;
+}
+
+#semantics_big .pptRight{
+    margin-left: 50px;
+    float: left;
+    background-image: url(../resources/AwesomeCoBlog.png);
+    background-repeat: no-repeat;
+    background-size:auto 480px;
+    width: 450px;
+    height: 600px;
+}
+
 
 /*
     Second step is nothing special, just a text with a link, so it doesn't need
