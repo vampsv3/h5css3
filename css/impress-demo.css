@@ -429,6 +429,10 @@ a:focus {
     text-indent:2em;
 }
 
+#multimedia_tiny video{
+    width: 100%;
+}
+
 /*
     The 'imagination' step is again some boring font-sizing.
 */
