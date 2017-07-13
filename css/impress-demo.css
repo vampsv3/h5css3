@@ -466,7 +466,6 @@ a:focus {
 #offline_storage_tiny .mainbody{
     width: 100%;
     font-size: 25px;
-    border:1px dashed #000;
     text-indent:2em;
     margin-bottom: 20px;
 }
@@ -480,16 +479,25 @@ a:focus {
     font-size: 22px;
 }
 
-/*
-    The 'imagination' step is again some boring font-sizing.
-*/
-
-#imagination {
-    width: 600px;
+#effects_big h1{
+    margin-bottom: 30px;
+    padding-left: 220px;
+    font-size: 60px;
 }
 
-#imagination .imagination {
-    font-size: 78px;
+#effects_big h2{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 35px;
+}
+
+#effects_big .mainbody{
+    width: 100%;
+    font-size: 25px;
+    text-indent:2em;
+}
+#effects_big canvas{
+    margin-left: 100px;
 }
 
 /*
