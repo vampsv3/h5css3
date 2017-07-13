@@ -433,6 +433,53 @@ a:focus {
     width: 100%;
 }
 
+
+#offline_storage_big h1{
+    margin-bottom: 30px;
+    padding-left: 290px;
+    font-size: 60px;
+}
+
+#offline_storage_big h2{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 35px;
+}
+
+#offline_storage_big .mainbody{
+    width: 100%;
+    font-size: 25px;
+    border:1px dashed #000;
+    text-indent:2em;
+}
+
+#offline_storage_tiny{
+    text-align: center;
+}
+
+#offline_storage_tiny h2{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 35px;
+}
+
+#offline_storage_tiny .mainbody{
+    width: 100%;
+    font-size: 25px;
+    border:1px dashed #000;
+    text-indent:2em;
+    margin-bottom: 20px;
+}
+
+#offline_storage_tiny table{
+    width: 300px;
+    margin: 0 auto;
+}
+
+#offline_storage_tiny td{
+    font-size: 22px;
+}
+
 /*
     The 'imagination' step is again some boring font-sizing.
 */
