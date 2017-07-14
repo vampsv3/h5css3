@@ -47,7 +47,7 @@
         <div class="catalog" id="multimedia">多媒体</div>
         <div class="catalog" id="offline_storage">本地存储</div>
         <div class="catalog" id="effects">三维、图形与特效</div>
-        <div class="catalog" id="device_access">设备通用</div>
+        <div class="catalog" id="device_access">设备访问</div>
         <div class="catalog" id="performance">性能与集成</div>
         <div class="catalog" id="connectivity">连接</div>
         <div class="catalog" id="styling">CSS3</div>
@@ -205,7 +205,7 @@
         </table>
     </div>
 
-    <div id="effects_big" class="step" data-x="6000" data-y="2100" data-rotate="27" data-scale="4">
+    <div id="effects_big" class="step" data-x="6300" data-y="2100" data-rotate="27.5" data-scale="4">
         <h1 class="subtitle">三维、图形与特效</h1>
         <h2 class="subtitle_small">Canvas画布元素</h2>
         <div class="mainbody">
@@ -214,16 +214,29 @@
         <canvas id="demoCanvas" width="500" height="500"></canvas>
     </div>
 
-    <div id="one-more-thing" class="step" data-x="6000" data-y="4000" data-scale="2">
-        <p>one more thing...</p>
+    <div id="effects_tiny" class="step" data-x="7500" data-y="3200" data-rotate="-27.5" data-scale="2">
+        <iframe src="map-distribute-animation/index.html" height="460px" width="730px"></iframe>
     </div>
 
-    <div id="its-in-3d" class="step" data-x="6200" data-y="4300" data-z="-100" data-rotate-x="-40" data-rotate-y="10" data-scale="2">
-        <p><span class="have">have</span> <span class="you">you</span> <span class="noticed">noticed</span> <span class="its">it’s</span> <span class="in">in</span> <b>3D<sup>*</sup></b>?</p>
-        <span class="footnote">* beat that, prezi ;)</span>
+    <div id="device_access_big" class="step" data-x="10500" data-y="-800" data-rotate="90" data-scale="4">
+        <h1 class="subtitle">设备访问</h1>
+        <section>
+        <article>
+          <header>
+            <p>&#12288;&#12288;HTML5为网页应用开发者们提供了更多功能上的优化选择，带来了更多体验功能的优势。HTML5提供了前所未有的数据与应用接入开放接口。使外部应用可以直接与浏览器内部的数据直接相连。</p>
+          </header>
+          <aside>
+            <img src="resources/WechatIMG41.png">
+          </aside>
+          <p>使用相机API：在设备上使用、操作、存储照片。</br>
+          触摸事件：允许多屏幕触摸事件作出反应。</br>
+          定位：允许使用设备的定位功能，获取用户位置信息。</br>
+          检测设备方向：可获取用户变换设备方向时的相关信息。</p>
+        </article>
+      </section>
     </div>
 
-    <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
+    <div id="overview" class="step" data-x="6000" data-y="1500" data-scale="13">
     </div>
 
 </div>
@@ -321,6 +334,10 @@
     for(var i =1;i<12;i++) {
         context.beginPath();
         context.arc(i*25,i*25,i*10,0,Math.PI*2,true);
+        context.shadowColor = 'red';
+        context.shadowOffsetX = 10;
+        context.shadowOffsetY = 10;
+        context.shadowBlur = 12;
         context.closePath();
         context.strokeStyle = "red";
         context.stroke();
