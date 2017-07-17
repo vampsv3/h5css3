@@ -504,6 +504,21 @@ a:focus {
     text-align: center;
 }
 
+#effects_tiny2 #dropBox {
+  margin: 15px;
+  width: 800px;
+  height: 600px;
+  border: 2px dashed gray;
+  border-radius: 8px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+ 
+#effects_tiny2 input {
+  margin: 15px; 
+}
+
 #device_access_big h1{
     margin-bottom: 30px;
     width: 100%;

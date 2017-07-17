@@ -182,7 +182,7 @@
     <div id="offline_storage_tiny" class="step" data-x="9000" data-y="-3025" data-z="-3000" data-rotate="300" data-scale="1">
         <h2 class="subtitle_small">本地数据库</h2>
         <div class="mainbody">
-            <p>Html5提供了一个浏览器端的数据库支持，允许我们直接通JS的API在浏览器端创建一个本地的数据库，而且支持标准的SQL的CRUD操作，让离线的Web应用更加方便的存储结构化的数据。</p>
+            <p>Html5提供了一个浏览器端的数据库支持，允许我们直接通过JS的API在浏览器端创建一个本地的数据库，而且支持标准的SQL的CRUD操作，让离线的Web应用更加方便的存储结构化的数据。</p>
         </div>
         <table id="tblInput">
             <tr>
@@ -218,6 +218,12 @@
         <iframe src="map-distribute-animation/index.html" height="460px" width="730px"></iframe>
     </div>
 
+    <div id="effects_tiny2" class="step" data-x="6000" data-y="4200" data-rotate="62.5" data-scale="2">
+        <div id="dropBox" draggable="true"></div>
+        <input id="fileInput" type="file" onchange="processFiles(this.files)">
+        <img id="thumbnail">
+    </div>
+
     <div id="device_access_big" class="step" data-x="10500" data-y="-800" data-rotate="90" data-scale="4">
         <h1 class="subtitle">设备访问</h1>
         <section>
@@ -229,9 +235,9 @@
             <img src="resources/WechatIMG41.png">
           </aside>
           <p>使用相机API：在设备上使用、操作、存储照片。</br>
-          触摸事件：允许多屏幕触摸事件作出反应。</br>
+          检测设备方向：可获取用户变换设备方向时的相关信息。</br>
           定位：允许使用设备的定位功能，获取用户位置信息。</br>
-          检测设备方向：可获取用户变换设备方向时的相关信息。</p>
+          触摸事件：允许多屏幕触摸事件作出反应。</p>
         </article>
       </section>
     </div>
@@ -341,6 +347,52 @@
         context.closePath();
         context.strokeStyle = "red";
         context.stroke();
+    }
+
+    var dropBox;
+ 
+    window.onload = function() {
+      dropBox = document.getElementById("dropBox");
+      dropBox.ondragenter = ignoreDrag;
+      dropBox.ondragover = ignoreDrag;
+      dropBox.ondrop = drop;
+    }
+ 
+    function ignoreDrag(e) {
+      //因为我们在处理拖放，所以应该确保没有其他元素会取得这个事件
+      e.stopPropagation();
+      e.preventDefault();
+    }
+ 
+    function drop(e) {
+      //取消事件传播及默认行为
+      e.stopPropagation();
+      e.preventDefault();
+      
+      //取得拖进来的文件
+      var data = e.dataTransfer;
+      var files = data.files;
+      //将其传给真正的处理文件的函数
+      processFiles(files);
+    }
+ 
+    function processFiles(files) {
+      var file = files[0];
+      var output = document.getElementById("fileOutput");
+      //创建FileReader
+      var reader = new FileReader();
+      //告诉它在准备好数据之后做什么  
+      reader.onload = function (e) {
+        //使用图像URL来绘制dropBox的背景
+        dropBox.style.backgroundImage = "url('" + e.target.result + "')";
+      };
+      //读取图片
+      reader.readAsDataURL(file);
+    }
+ 
+    function showFileInput() {
+      var fileInput = document.getElementById("fileInput");
+      fileInput.click();
     }
 
 </script>
