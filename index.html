@@ -209,19 +209,13 @@
         <h1 class="subtitle">三维、图形与特效</h1>
         <h2 class="subtitle_small">Canvas画布元素</h2>
         <div class="mainbody">
-            <p>传统的网页，总是使用GIF活JPEG来显示图像，而Canvas则是用JavaScript的一种绘图手段。可以用它来画图、合成图像、制作动画。</p>
+            <p>传统的网页，总是使用GIF或JPEG来显示图像，而Canvas则是用JavaScript的一种绘图手段。可以用它来画图、合成图像、制作动画。</p>
         </div>
         <canvas id="demoCanvas" width="500" height="500"></canvas>
     </div>
 
     <div id="effects_tiny" class="step" data-x="7500" data-y="3200" data-rotate="-27.5" data-scale="2">
         <iframe src="map-distribute-animation/index.html" height="460px" width="730px"></iframe>
-    </div>
-
-    <div id="effects_tiny2" class="step" data-x="6000" data-y="4200" data-rotate="62.5" data-scale="2">
-        <div id="dropBox" draggable="true"></div>
-        <input id="fileInput" type="file" onchange="processFiles(this.files)">
-        <img id="thumbnail">
     </div>
 
     <div id="device_access_big" class="step" data-x="10500" data-y="-800" data-rotate="90" data-scale="4">
@@ -240,6 +234,45 @@
           触摸事件：允许多屏幕触摸事件作出反应。</p>
         </article>
       </section>
+    </div>
+
+    <div id="performance_big" class="step" data-x="11000" data-y="3000" data-scale="4">
+        <h1 class="subtitle">性能与集成</h1>
+        <h2>网页后台任务（Web Workers）</h2>
+        <div class="pptUp"><p>Web Workers 是运行在浏览器后台的 JavaScript，独立于其他脚本，不会影响页面的性能。Web Workers 解决客户端JavaScript无法多线程的问题，其定义的worker是指代码的并行线程，不过web worker处于一个自包含的环境中，无法访问主线程的window对象和document对象，和主线程通信只能通过异步消息传递机制。</p></div>
+        <div class="pptDown">
+            <p>w=new Worker("/scripts/workers/demo_workers.js");</p>
+            <p>w.onmessage = function (event) { print(event.data);};</p>
+        </div>
+        <div class="pptDown">
+            <p>postMessage(i);</p>
+        </div>
+    </div>
+
+    <div id="performance_tiny" class="step" data-x="13500" data-y="2000" data-z="-3000" data-scale="1">
+        <h2>新的Ajax（XMLHttpRequest 2）</h2>
+        <div class="pptUp"><p>XMLHttpRequest是一个浏览器接口，它使得Javascript可以进行HTTP(S)通信，也就是Ajax。</br>
+            &#12288;&#12288;上一代Ajax有以下缺点：</p></div>
+        <div class="pptDown">
+            <p>(1)只支持文本数据的传送，无法用来读取和上传二进制文件。</p>
+            <p>(2)传送和接收数据时，没有进度信息，只能提示有没有完成。</p>
+            <p>(3)受到“同域限制”，只能向同一域名的服务器请求数据，不能跨域。</p>
+        </div>
+        <div class="pptUp"><p>XMLHttpRequest 2也就是新的Ajax。针对老版本的缺点，做出了大幅改进，有下面的特点：</div>
+        <div class="pptDown">
+            <p>(1)可以设置HTTP请求的时限。</p>
+            <p>(2)可以使用FormData对象管理表单数据。</p>
+            <p>(3)可以上传文件。</p>
+            <p>(4)可以请求不同域名下的数据（跨域请求）。</p>
+            <p>(5)可以获取服务器端的二进制数据。</p>
+            <p>(6)可以获得数据传输的进度信息。</p>
+        </div>
+    </div>
+
+    <div id="effects_tiny2" class="step" data-x="9000" data-y="1800" data-z="-3000" data-scale="1">
+        <div id="dropBox" draggable="true"></div>
+        <input id="fileInput" type="file" onchange="processFiles(this.files)">
+        <img id="thumbnail">
     </div>
 
     <div id="overview" class="step" data-x="6000" data-y="1500" data-scale="13">
