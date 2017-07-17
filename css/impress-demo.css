@@ -504,21 +504,6 @@ a:focus {
     text-align: center;
 }
 
-#effects_tiny2 #dropBox {
-  margin: 15px;
-  width: 800px;
-  height: 450px;
-  border: 2px dashed gray;
-  border-radius: 8px;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  text-align: center;
-}
- 
-#effects_tiny2 input {
-  margin: 15px; 
-}
-
 #device_access_big h1{
     margin-bottom: 30px;
     width: 100%;
@@ -600,6 +585,53 @@ a:focus {
     font-size: 22px;
     text-indent:4em;
     margin-bottom: 20px;
+}
+
+#performance_tiny2 #dropBox {
+  margin: 15px;
+  width: 800px;
+  height: 450px;
+  border: 2px dashed gray;
+  border-radius: 8px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+ 
+#performance_tiny2 input {
+  margin: 15px; 
+}
+
+#connectivity_big h1{
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 60px;
+}
+
+#connectivity_big h2{
+    margin-bottom: 10px;
+    font-size: 40px;
+}
+
+#connectivity_big .pptUp{
+    width: 100%;
+    word-wrap:break-word;
+    font-size: 25px;
+    text-indent:2em;
+    margin-bottom: 10px;
+}
+
+#connectivity_big .pptDown{
+    width: 48%;
+    font-size: 15px;
+    border:1px dashed #000;
+    text-indent:2em;
+    margin-bottom: 10px;
+}
+
+#connectivity_big .abreast{
+    float: left;
+    margin-right: 1%;
 }
 
 

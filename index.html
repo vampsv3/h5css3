@@ -249,7 +249,7 @@
         </div>
     </div>
 
-    <div id="performance_tiny" class="step" data-x="13500" data-y="2000" data-z="-3000" data-scale="1">
+    <div id="performance_tiny" class="step" data-x="12500" data-y="1500" data-z="-3000" data-scale="1">
         <h2>新的Ajax（XMLHttpRequest 2）</h2>
         <div class="pptUp"><p>XMLHttpRequest是一个浏览器接口，它使得Javascript可以进行HTTP(S)通信，也就是Ajax。</br>
             &#12288;&#12288;上一代Ajax有以下缺点：</p></div>
@@ -269,10 +269,58 @@
         </div>
     </div>
 
-    <div id="effects_tiny2" class="step" data-x="9000" data-y="1800" data-z="-3000" data-scale="1">
+    <div id="performance_tiny2" class="step" data-x="9000" data-y="1800" data-z="-3000" data-scale="1">
         <div id="dropBox" draggable="true"></div>
         <input id="fileInput" type="file" onchange="processFiles(this.files)">
         <img id="thumbnail">
+    </div>
+
+    <div id="connectivity_big" class="step" data-x="14500" data-y="3000" data-rotate="-90" data-scale="4">
+        <h1 class="subtitle">连接</h1>
+        <div class="pptUp"><p>HTTP是无连接的，一次请求，一次响应。想要实现微信网页版扫一扫登录，网页版微信聊天的功能，需要使用轮询的方式达到长连接的效果，轮询的大部分时间是在做无用功，浪费网络，浪费资源。现在HTML5为我们带来了更高效的连接方案 Web Socket 和 Server-Sent Event 。</p></div>
+        <h2>Web Socket</h2>
+        <div class="pptUp"><p>Websocket基于HTTP协议，是一个持久化的协议。</p></div>
+        <div class="pptDown">
+            <p>var wsServer = 'ws://localhost:8888/Demo';</p>
+            <p>var websocket = new WebSocket(wsServer); </p>
+        </div>
+        <div class="pptDown abreast">
+            <p>GET /chat HTTP/1.1</p>
+            <p>Host: server.example.com</p>
+            <p>Upgrade: websocket</p>
+            <p>Connection: Upgrade</p>
+            <p>Sec-WebSocket-Key: x3JJHMbDL1EzLkh9GBhXDw==</p>
+            <p>Sec-WebSocket-Protocol: chat, superchat</p>
+            <p>Sec-WebSocket-Version: 13</p>
+            <p>Origin: http://example.com</p>
+        </div>
+        <div class="pptDown abreast">
+            <p>HTTP/1.1 101 Switching Protocols</p>
+            <p>Upgrade: websocket</p>
+            <p>Connection: Upgrade</p>
+            <p>Sec-WebSocket-Accept: HSmrc0sMl5OPpG2HaGWk=</p>
+            <p>Sec-WebSocket-Protocol: chat</p>
+        </div>
+    </div>
+
+    <div id="connectivity_tiny" class="step" data-x="18500" data-y="1500" data-z="-3000" data-scale="1">
+        <h2>新的Ajax（XMLHttpRequest 2）</h2>
+        <div class="pptUp"><p>XMLHttpRequest是一个浏览器接口，它使得Javascript可以进行HTTP(S)通信，也就是Ajax。</br>
+            &#12288;&#12288;上一代Ajax有以下缺点：</p></div>
+        <div class="pptDown">
+            <p>(1)只支持文本数据的传送，无法用来读取和上传二进制文件。</p>
+            <p>(2)传送和接收数据时，没有进度信息，只能提示有没有完成。</p>
+            <p>(3)受到“同域限制”，只能向同一域名的服务器请求数据，不能跨域。</p>
+        </div>
+        <div class="pptUp"><p>XMLHttpRequest 2也就是新的Ajax。针对老版本的缺点，做出了大幅改进，有下面的特点：</div>
+        <div class="pptDown">
+            <p>(1)可以设置HTTP请求的时限。</p>
+            <p>(2)可以使用FormData对象管理表单数据。</p>
+            <p>(3)可以上传文件。</p>
+            <p>(4)可以请求不同域名下的数据（跨域请求）。</p>
+            <p>(5)可以获取服务器端的二进制数据。</p>
+            <p>(6)可以获得数据传输的进度信息。</p>
+        </div>
     </div>
 
     <div id="overview" class="step" data-x="6000" data-y="1500" data-scale="13">
@@ -392,34 +440,26 @@
     }
  
     function ignoreDrag(e) {
-      //因为我们在处理拖放，所以应该确保没有其他元素会取得这个事件
       e.stopPropagation();
       e.preventDefault();
     }
  
     function drop(e) {
-      //取消事件传播及默认行为
       e.stopPropagation();
       e.preventDefault();
       
-      //取得拖进来的文件
       var data = e.dataTransfer;
       var files = data.files;
-      //将其传给真正的处理文件的函数
       processFiles(files);
     }
  
     function processFiles(files) {
       var file = files[0];
       var output = document.getElementById("fileOutput");
-      //创建FileReader
       var reader = new FileReader();
-      //告诉它在准备好数据之后做什么  
       reader.onload = function (e) {
-        //使用图像URL来绘制dropBox的背景
         dropBox.style.backgroundImage = "url('" + e.target.result + "')";
       };
-      //读取图片
       reader.readAsDataURL(file);
     }
  
