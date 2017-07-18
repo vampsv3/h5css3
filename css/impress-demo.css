@@ -634,6 +634,28 @@ a:focus {
     margin-right: 1%;
 }
 
+#connectivity_tiny h2{
+    margin-bottom: 10px;
+    font-size: 40px;
+}
+
+#connectivity_tiny .pptUp{
+    width: 100%;
+    word-wrap:break-word;
+    font-size: 25px;
+    text-indent:2em;
+    padding-top: 5px;
+    margin-bottom: 20px;
+}
+
+#connectivity_tiny .pptDown{
+    width: 100%;
+    font-size: 22px;
+    text-indent:2em;
+    margin-bottom: 20px;
+    border:1px dashed #000;
+}
+
 
 
 

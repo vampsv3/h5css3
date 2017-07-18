@@ -304,22 +304,22 @@
     </div>
 
     <div id="connectivity_tiny" class="step" data-x="18500" data-y="1500" data-z="-3000" data-scale="1">
-        <h2>新的Ajax（XMLHttpRequest 2）</h2>
-        <div class="pptUp"><p>XMLHttpRequest是一个浏览器接口，它使得Javascript可以进行HTTP(S)通信，也就是Ajax。</br>
-            &#12288;&#12288;上一代Ajax有以下缺点：</p></div>
+        <h2>Server-Sent Event</h2>
+        <div class="pptUp"><p>Server-Sent Event 指的是网页自动获取来自服务器的更新。客户端只需发送一次请求，服务器会按需推送数据给客户端。</div>
         <div class="pptDown">
-            <p>(1)只支持文本数据的传送，无法用来读取和上传二进制文件。</p>
-            <p>(2)传送和接收数据时，没有进度信息，只能提示有没有完成。</p>
-            <p>(3)受到“同域限制”，只能向同一域名的服务器请求数据，不能跨域。</p>
+            <p>var source=new EventSource("/example/html5/demo_sse.php");</p>
+            <p>source.onmessage=function(event) {</p>
+            <p>&#12288;&#12288;document.getElementById("result").innerHTML+=event.data + "&lt;br /&gt;"</p>
+            <p>}</p>
         </div>
-        <div class="pptUp"><p>XMLHttpRequest 2也就是新的Ajax。针对老版本的缺点，做出了大幅改进，有下面的特点：</div>
         <div class="pptDown">
-            <p>(1)可以设置HTTP请求的时限。</p>
-            <p>(2)可以使用FormData对象管理表单数据。</p>
-            <p>(3)可以上传文件。</p>
-            <p>(4)可以请求不同域名下的数据（跨域请求）。</p>
-            <p>(5)可以获取服务器端的二进制数据。</p>
-            <p>(6)可以获得数据传输的进度信息。</p>
+            <p>&lt;?php</p>
+            <p>header('Content-Type: text/event-stream');</p>
+            <p>header('Cache-Control: no-cache');</p>
+            <p>$time = date('r');。</p>
+            <p>echo "data: The server time is: {$time}\n\n";</p>
+            <p>flush();</p>
+            <p>?&gt</p>
         </div>
     </div>
 
