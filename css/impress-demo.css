@@ -656,6 +656,133 @@ a:focus {
     border:1px dashed #000;
 }
 
+.styling h1{
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 60px;
+}
+
+.styling h2{
+    text-align: left;
+    margin-bottom: 10px;
+    font-size: 40px;
+}
+
+.styling .pptUp{
+    width: 100%;
+    word-wrap:break-word;
+    font-size: 25px;
+    text-indent:2em;
+    padding-top: 5px;
+    margin-bottom: 10px;
+}
+
+.styling .pptDown{
+    width: 50%;
+    font-size: 25px;
+    border:1px dashed #000;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.styling #borderRadius{
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+.styling #boxShadow{
+    box-shadow: 10px 10px 5px #888;
+    -moz-box-shadow: 10px 10px 5px #888;
+    -webkit-box-shadow: 10px 10px 5px #888;
+}
+
+.styling #textShadow{
+    text-shadow: 2px 2px 1px #f24;
+    -moz-text-shadow: 2px 2px 1px #f24;
+    -webkit-text-shadow: 2px 2px 1px #f24;
+}
+
+.styling #fontFace{
+    font-family: Test;
+    font-size: 20px;
+}
+
+.styling #wordWrap1{
+    word-wrap: normal;
+    height: auto;
+}
+
+.styling #wordWrap2{
+    word-wrap: break-word;
+    height: auto;
+}
+
+.styling #rgba1{
+    background: rgba(255, 0, 0, 0.3);
+}
+
+.styling #rgba2{
+    background: rgb(255, 0, 0); 
+    opacity: 0.3;
+}
+
+.styling #resize{
+    resize:both;
+    overflow:auto;
+}
+
+.styling #outline{
+    outline-offset: 10px;
+    outline: 2px solid blue;
+}
+
+.styling #transform1{
+    transform: rotate(30deg);
+    -moz-transform: rotate(30deg);
+    -webkit-transform: rotate(30deg);
+}
+
+.styling #transform2{
+    transform: scale(0.5, 2.0);
+    -moz-transform: scale(0.5, 2.0);
+    -webkit-transform: scale(0.5, 2.0);
+}
+
+.styling #transform3{
+    transform: skew(-30deg);
+    -moz-transform: skew(-30deg);
+    -webkit-transform: skew(-30deg);
+}
+
+.styling #transform4{
+    transform: translate(30px, 0);
+    -moz-transform: translate(30px, 0);
+    -webkit-transform: translate(30px, 0);
+}
+
+
+
+.styling ol li{margin-bottom: 0px; border: 4px dotted #999; border-bottom:none; padding:20px;}
+.styling ol li:last-child{border-bottom:4px dotted #999;}
+.styling div[class|="selector"]{
+    border-bottom: 1px solid #999;
+    padding: 10px;
+}
+.styling .selector-1 :nth-child(2n){
+    background: red;
+}
+.styling .selector-2 :checked{
+    margin-left: 100px;
+}
+.styling .box1, .box2{border:1px solid #555; width: 400px; height: 70px; margin: 30px auto; padding:10px;font-size:16px;}
+.styling .box2{width: 200px;height: 50px;}
+.styling .box3{width: 200px; height: 200px;-webkit-box-shadow: 2px 2px 5px #000; -webkit-border-radius: 5px;}
+.styling .box3:hover{background: #888;}
+
+
+
+
 
 
 
